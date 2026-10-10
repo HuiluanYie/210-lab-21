@@ -42,6 +42,11 @@ public:
 
     // destructor
     ~Goat() {}
+
+    // print function
+    void print() {
+        cout << name << " (" << color << ", " << age << ")\n";
+    }
 };
 
 class DoublyLinkedList {
@@ -147,7 +152,8 @@ public:
         Node* current = head;
         if (!current) return;
         while (current) {
-            cout << current->data << " ";
+            cout << "\t";
+            current->object.print();
             current = current->next;
         }
         cout << endl;
@@ -157,7 +163,8 @@ public:
         Node* current = tail;
         if (!current) return;
         while (current) {
-            cout << current->data << " ";
+            cout << "\t";
+            current->object.print();
             current = current->prev;
         }
         cout << endl;
