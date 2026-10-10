@@ -1,9 +1,38 @@
 // COMSC-210 | Lab 21 | Huiluan Yie
 
 #include <iostream>
+#include <ctime>
+#include <cstdlib>
+#include <cstring>
 using namespace std;
 
 const int MIN_NR = 10, MAX_NR = 99, MIN_LS = 5, MAX_LS = 20;
+const int SIZE = 15
+
+class Goat {
+private:
+    int age;
+    string name;
+    string color;
+    string * names;
+    string * colors;
+
+public:
+    // constructor
+    Goat() {
+
+    }
+    Goat(int a, string n, string c) {
+        age = a;
+        name = n;
+        color = c;
+    }
+
+    // destructor
+    ~Goat() {
+
+    }
+};
 
 class DoublyLinkedList {
 private:
