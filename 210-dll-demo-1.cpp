@@ -7,20 +7,32 @@
 using namespace std;
 
 const int MIN_NR = 10, MAX_NR = 99, MIN_LS = 5, MAX_LS = 20;
-const int SIZE = 15
+
+const int SIZE = 15, MAX_AGE = 20;
 
 class Goat {
 private:
     int age;
     string name;
     string color;
-    string * names;
-    string * colors;
+    string names[SIZE] = {
+        "Alice", "Benjamin", "Chloe", "Daniel", "Emma",
+        "Felix", "Grace", "Henry", "Isabella", "Jacob",
+        "Kayla", "Liam", "Maya", "Noah", "Olivia"
+    };
+    string colors[SIZE] = {
+        "Red", "Orange", "Yellow", "Green", "Blue",
+        "Purple", "Pink", "Brown", "Black", "White",
+        "Gray", "Teal", "Navy", "Gold", "Silver"
+    };
 
 public:
     // constructor
     Goat() {
-
+        age = rand() % MAX_AGE + 1;
+        int i = rand() % SIZE;
+        name = names[i];
+        color = colors[i];
     }
     Goat(int a, string n, string c) {
         age = a;
@@ -29,9 +41,7 @@ public:
     }
 
     // destructor
-    ~Goat() {
-
-    }
+    ~Goat() {}
 };
 
 class DoublyLinkedList {
