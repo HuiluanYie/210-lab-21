@@ -86,6 +86,7 @@ public:
         }
     }
 
+    /*
     void insert_after(int value, int position) {
         if (position < 0) {
             cout << "Position must be >= 0." << endl;
@@ -140,6 +141,7 @@ public:
 
         delete temp;
     }
+    */
 
     void print() {
         Node* current = head;
@@ -172,6 +174,7 @@ public:
 
 // Driver program
 int main() {
+    srand(time(0));
     DoublyLinkedList list;
     
     // Append a random number of Goat objects
